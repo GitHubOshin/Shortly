@@ -2,16 +2,6 @@ import { useState } from 'react'
 
 function Header() {
   const [isMenuOpening, setIsMenuOpening] = useState(false)
-  const [clickBtn, setClickBtn] = useState(0)
-
-  function countClickBtn() {
-    setClickBtn(clickBtn + 1)
-    setIsMenuOpening(true)
-    if (clickBtn === 1) {
-      setIsMenuOpening(false)
-      setClickBtn(0)
-    }
-  }
 
   function MenuDesktop(props) {
     return (
@@ -54,7 +44,10 @@ function Header() {
           </button>
           <SignUp />
         </div>
-        <button className="desktop:hidden" onClick={countClickBtn}>
+        <button
+          className="desktop:hidden"
+          onClick={() => setIsMenuOpening(!isMenuOpening)}
+        >
           <img alt="Menu button" src="images/menu-btn.svg" />
         </button>
       </div>
