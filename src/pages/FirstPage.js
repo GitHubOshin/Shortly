@@ -1,11 +1,14 @@
 import Header from '../components/firstpage/Header'
+import TwoItems from '../components/firstpage/TwoItems'
 
 function FirstPage() {
   return (
-    <div>
+    <section className="">
       <Header />
-    </div>
+      <TwoItems />
+    </section>
   )
 }
 
 export default FirstPage
+
