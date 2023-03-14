@@ -32,7 +32,7 @@ function Header() {
       <div className="w-full h-full flex justify-between mobile:py-[31.5px] desktop:py-[51.5px]">
         <div className="flex items-center gap-[46px]">
           <img alt="Logo" src="images/logo.svg" />
-          <div className="mobile:hidden flex gap-[32px] ">
+          <div className="mobile:hidden desktop:flex gap-2 ">
             <MenuDesktop link="" menu="Features" />
             <MenuDesktop link="" menu="Pricing" />
             <MenuDesktop link="" menu="Resoures" />
