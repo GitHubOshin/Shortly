@@ -31,12 +31,12 @@ function LastPage() {
   }
 
   return (
-    <section className="bg-pink-300 mobile:h-[1076px] desktop:h-[560px]">
+    <section className="mobile:h-[1076px] desktop:h-[560px]">
       <div className="relative w-full h-full max-h-[300px] desktop:h-[250px] flex justify-center items-center">
         <img
           alt="Background"
           src="images/backgrounds/bg-boost-desktop.svg"
-          className="absolute mobile:hidden desktop:block min-w-[1440px] bg-darkViolet"
+          className="absolute mobile:hidden desktop:block w-full min-w-[1440px] max-h-[250px] bg-darkViolet"
         />
         <img
           alt="Background"
@@ -85,3 +85,4 @@ function LastPage() {
 }
 
 export default LastPage
+
