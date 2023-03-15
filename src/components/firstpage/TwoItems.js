@@ -1,4 +1,6 @@
-function TwoItems() {
+function TwoItems(props) {
+  const { isMenuOpening } = props
+
   function GetStartedBtn() {
     return (
       <button className="bg-cyan hover:bg-[#A7E2E3] w-[197px] h-[56px] rounded-full text-white">
@@ -8,8 +10,8 @@ function TwoItems() {
   }
 
   return (
-    <section className=" mt-[30px] mb-[152px] w-full min-w-[342px] max-w-[1110px] mobile:flex mobile:flex-col-reverse desktop:grid desktop:grid-cols-2 items-center">
-      <div className="mobile:flex mobile:flex-col mobile:items-center desktop:items-start mobile:mt-[45px] desktop:mt-0">
+    <section className="mt-[30px] mb-[152px] w-full min-w-[342px] max-w-[1110px] mobile:flex mobile:flex-col-reverse desktop:grid desktop:grid-cols-2 items-center">
+      <div className="mobile:flex mobile:flex-col mobile:items-center desktop:items-start">
         <h1 className="font-bold mobile:mb-5 desktop:mb-0 mobile:text-[40px] mobile:text-center desktop:text-left desktop:text-[67px] mobile:leading-[47px] desktop:leading-[77px]">
           More than just
           <br />
@@ -26,7 +28,13 @@ function TwoItems() {
         </p>
         <GetStartedBtn />
       </div>
-      <img alt="Illustration working" src="images/illustration-working.svg" />
+      {isMenuOpening ? null : (
+        <img
+          alt="Illustration working"
+          src="images/illustration-working.svg"
+          className="mobile:mb-[45px] desktop:mb-0"
+        />
+      )}
     </section>
   )
 }
