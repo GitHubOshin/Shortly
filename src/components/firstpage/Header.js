@@ -1,19 +1,9 @@
-import { useState } from 'react'
-
-function Header() {
-  const [isMenuOpening, setIsMenuOpening] = useState(false)
+function Header(props) {
+  const { isMenuOpening, setIsMenuOpening } = props
 
   function MenuDesktop(props) {
     return (
       <a className="text-greyishViolet hover:text-black" href={props.link}>
-        {props.menu}
-      </a>
-    )
-  }
-
-  function MenuMobile(props) {
-    return (
-      <a className="text-white" href={props.link}>
         {props.menu}
       </a>
     )
@@ -51,20 +41,6 @@ function Header() {
           <img alt="Menu button" src="images/menu-btn.svg" />
         </button>
       </div>
-      {isMenuOpening === true ? (
-        <div className="desktop:hidden bg-darkViolet w-[327px] h-[383px] rounded-xl flex flex-col text-center px-6 py-10">
-          <div className="flex flex-col gap-8">
-            <MenuMobile link="" menu="Features" />
-            <MenuMobile link="" menu="Pricing" />
-            <MenuMobile link="" menu="Resoures" />
-          </div>
-          <hr className=" my-9 w-full" />
-          <div className="flex flex-col gap-6">
-            <MenuMobile link="" menu="Login" />
-            <SignUp />
-          </div>
-        </div>
-      ) : null}
     </section>
   )
 }
