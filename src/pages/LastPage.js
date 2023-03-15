@@ -1,10 +1,10 @@
 function LastPage() {
   function FooterLinks(props) {
     const { array, title } = props
-    
+
     return (
       <div className="flex flex-col gap-4">
-        <h1 className="text-white">{title}</h1>
+        <h1 className="text-white font-bold">{title}</h1>
         <ul className="flex flex-col gap-3">
           {array.map((item, index) => {
             return (
@@ -53,11 +53,11 @@ function LastPage() {
         </div>
       </div>
 
-      <footer className="bg-[#232027] w-full h-full desktop:h-[310px] flex flex-col justify-center items-center">
-        <div className="w-full max-w-[1110px] flex justify-between items-start">
+      <footer className="bg-[#232027] w-full mobile:h-[774px] desktop:h-[310px] flex flex-col justify-center items-center mobile:text-center desktop:text-start">
+        <div className=" w-full max-w-[1110px] flex mobile:flex-col desktop:flex-row justify-between mobile:items-center  desktop:items-start mobile:gap-12 desktop:gap-0">
           <img alt="Shortly logo" src="images/logo-white.svg" />
-          <div className="flex gap-[100px] items-start">
-            <div className="flex gap-[75px]">
+          <div className="flex mobile:flex-col desktop:flex-row mobile:gap-11 desktop:gap-[100px] mobile:items-center desktop:items-start">
+            <div className="flex mobile:flex-col desktop:flex-row mobile:gap-9 desktop:gap-[75px]">
               <FooterLinks
                 title="Features"
                 array={['Link Shortening', 'Branded Links', 'Analytics']}
