@@ -1,38 +1,33 @@
-import Card from '../components/secondpage/Card'
+import Input from '../components/secondpage/Input'
+import ThreeCards from '../components/secondpage/ThreeCards'
 
 function SecondPage() {
   return (
-    <section className="bg-[#F0F1F6] flex flex-col items-center">
-      <div className="relative mobile:h-[1046px] desktop:w-[1110px] desktop:h-[400px] flex justify-center items-center">
-        <div className="mobile:hidden desktop:block z-10 absolute bg-cyan w-[730px] h-2"></div>
-        <div className="mobile:block desktop:hidden z-10 absolute bg-cyan w-2 h-[730px]"></div>
-        <div className="z-20 flex mobile:flex-col desktop:flex-row mobile:gap-[92px] desktop:gap-0 ">
-          <div className="desktop:absolute top-[45px] left-0">
-            <Card
-              alt="Brand Recognition"
-              src="images/icons/icon-brand-recognition.svg"
-              heading="Brand Recognition"
-              content="Boost your brand recognition with each click. Generic link don't mean a thing. Branded links help instil confidence in your content."
-            />
-          </div>
-          <div className="desktop:absolute top-[88px] left-[380px]">
-            <Card
-              alt="Detailed Records"
-              src="images/icons/icon-detailed-records.svg"
-              heading="Detailed Records"
-              content="Gain insights into who is clicking your links. Knowing when and where people engage whit your content helps inform better decisions."
-            />
-          </div>
-          <div className="desktop:absolute bottom-0 right-0">
-            <Card
-              alt="Fully Customizable"
-              src="images/icons/icon-fully-customizable.svg"
-              heading="Fully Customizable"
-              content="Improve brand awareness and content discoverability through customizable links, supercharging audience engagment."
-            />
+    <section className="relative bg-[#F0F1F6] flex flex-col items-center px-6 pt-[84px]">
+      <Input />
+      <div className="mt-6 w-[1110px] flex flex-col gap-4">
+        <div className="bg-white h-[72px] rounded-md px-8 flex justify-between items-center py-4">
+          <h1>Hellooooooooooo</h1>
+          <div className="h-full flex items-center gap-6">
+            <a href="/" className="text-cyan">
+              CopyCopyCopyCopyCopy
+            </a>
+            <button className="bg-cyan hover:bg-[#A7E2E3] w-[103px] h-full text-white font-bold rounded-md">
+              Copy
+            </button>
           </div>
         </div>
       </div>
+      <div className="text-center min-w-[289px] max-w-[515px] mobile:mb-[47px] desktop:mb-[57px] mt-20">
+        <h1 className="font-bold mobile:text-2xl desktop:text-4xl mb-5">
+          Advanced Statistics
+        </h1>
+        <p className="text-greyishViolet text-lg">
+          Track how your links are performing across the web with our advanced
+          statistics dashboard.
+        </p>
+      </div>
+      <ThreeCards />
     </section>
   )
 }
