@@ -1,4 +1,8 @@
+import { useState } from 'react'
+
 function Input() {
+  const [inputLink, setInputLink] = useState('')
+
   return (
     <div className="absolute top-[-80px]">
       <div className="relative w-[1110px] h-[168px]">
@@ -16,6 +20,8 @@ function Input() {
           <input
             className="w-full h-full min-h-[48px] max-w-[769px] max-h-[64px] rounded-lg mobile:px-3 desktop:px-[30px] text-xl"
             placeholder="Shorten a link here..."
+            value={inputLink}
+            onChange={(e) => setInputLink(e.target.value)}
           />
           <button className="bg-cyan hover:bg-[#A7E2E3] text-white disabled:none h-[64px] desktop:w-[188px] rounded-lg text-xl font-bold">
             Shorten It!
