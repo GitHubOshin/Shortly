@@ -2,7 +2,7 @@ import Card from './Card'
 
 function ThreeCards() {
   return (
-    <div className="relative mobile:h-[1046px] desktop:w-[1110px] desktop:h-[400px] flex justify-center items-center">
+    <div className="relative mobile:h-[1046px] desktop:w-[1110px] desktop:h-[400px] flex justify-center items-center mobile:mb-10 desktop:mb-[120px]">
       <div className="mobile:hidden desktop:block z-10 absolute bg-cyan w-[730px] h-2"></div>
       <div className="mobile:block desktop:hidden z-10 absolute bg-cyan w-2 h-[730px]"></div>
       <div className="z-20 flex mobile:flex-col desktop:flex-row mobile:gap-[92px] desktop:gap-0 ">
