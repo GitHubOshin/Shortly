@@ -20,30 +20,30 @@ function SocialMedia() {
   }
 
   return (
-    <div>
+    <div className="flex gap-6">
       <button
         onMouseEnter={() => handleHoverIcons('fb')}
         onMouseLeave={() => handleHoverIcons('fb')}
       >
-        <FacebookIcon fill={icons.fb ? 'white' : 'hsl(180, 66%, 49%)'} />
+        <FacebookIcon fill={icons.fb ? 'hsl(180, 66%, 49%)' : 'white'} />
       </button>
       <button
         onMouseEnter={() => handleHoverIcons('tw')}
         onMouseLeave={() => handleHoverIcons('tw')}
       >
-        <TwitterIcon fill={icons.tw ? 'white' : 'hsl(180, 66%, 49%)'} />
+        <TwitterIcon fill={icons.tw ? 'hsl(180, 66%, 49%)' : 'white'} />
       </button>
       <button
         onMouseEnter={() => handleHoverIcons('pt')}
         onMouseLeave={() => handleHoverIcons('pt')}
       >
-        <Pinterest fill={icons.pt ? 'white' : 'hsl(180, 66%, 49%)'} />
+        <Pinterest fill={icons.pt ? 'hsl(180, 66%, 49%)' : 'white'} />
       </button>
       <button
         onMouseEnter={() => handleHoverIcons('ig')}
         onMouseLeave={() => handleHoverIcons('ig')}
       >
-        <InstagramIcon fill={icons.ig ? 'white' : 'hsl(180, 66%, 49%)'} />
+        <InstagramIcon fill={icons.ig ? 'hsl(180, 66%, 49%)' : 'white'} />
       </button>
     </div>
   )
