@@ -1,7 +1,8 @@
+import SocialMedia from '../components/SocialMedia'
+
 function LastPage() {
   function FooterLinks(props) {
     const { array, title } = props
-
     return (
       <div className="flex flex-col gap-4">
         <h1 className="text-white font-bold">{title}</h1>
@@ -18,15 +19,6 @@ function LastPage() {
           })}
         </ul>
       </div>
-    )
-  }
-
-  function BtnImg(props) {
-    const { alt, src } = props
-    return (
-      <button>
-        <img alt={alt} src={src} />
-      </button>
     )
   }
 
@@ -71,12 +63,7 @@ function LastPage() {
                 array={['About', 'Our Team', 'Careers', 'Contact']}
               />
             </div>
-            <div className="flex gap-6">
-              <BtnImg alt="Facebook" src={'images/icons/icon-facebook.svg'} />
-              <BtnImg alt="Twitter" src="images/icons/icon-twitter.svg" />
-              <BtnImg alt="Pinterest" src="images/icons/icon-pinterest.svg" />
-              <BtnImg alt="Instagram" src="images/icons/icon-instagram.svg" />
-            </div>
+            <SocialMedia />
           </div>
         </div>
       </footer>
@@ -85,4 +72,3 @@ function LastPage() {
 }
 
 export default LastPage
-
