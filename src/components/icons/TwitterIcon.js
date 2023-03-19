@@ -1,4 +1,4 @@
-function TwitterIcon({ fill = 'hsl(180, 66%, 49%)' }) {
+function TwitterIcon({ fill = '#fff' }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20">
       <path
