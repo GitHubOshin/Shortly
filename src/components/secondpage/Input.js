@@ -1,8 +1,5 @@
-import { useState } from 'react'
-
-function Input() {
-  const [inputLink, setInputLink] = useState('')
-
+function Input(props) {
+  const { inputLink, setInputLink } = props
   return (
     <div className="absolute w-full top-[0px] flex justify-center items-center">
       <img
@@ -31,4 +28,3 @@ function Input() {
 }
 
 export default Input
-
